@@ -1,0 +1,5 @@
+{
+  "settings": ["drupal.yml"],
+  "command": [],
+  "run_command": "docker-compose up -d"
+}

@@ -1,0 +1,24 @@
+version: '2'
+services:
+    drupal:
+        image: drupal
+        links:
+            - db
+        ports:
+            - "0000:80"
+        volumes:
+            - /var/www/html/modules
+            - /var/www/html/profiles
+            - /var/www/html/themes
+            - /var/www/html/sites
+
+    db:
+        image: mysql
+        ports:
+            - "1111:3306"
+        volumes:
+            - /var/lib/mysql
+        environment:
+            - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=drupal8
+            - MYSQL_ROOT_PASSWORD=root

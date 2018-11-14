@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+  <app>:
+    image: <app>
+    ports:
+      - 8080:80
+    volumes:
+      - /var/www/html/modules
+      - /var/www/html/profiles
+      - /var/www/html/themes
+
+  <vhost>:
+    image: <vhost>
+    volumes:
+      - ./:/var/www:/usr/share/nginx/html/
+    depends_on:
+      - <app>

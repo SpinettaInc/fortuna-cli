@@ -1,0 +1,6 @@
+{
+  "settings": ["Dockerfile", "rails.yml"],
+  "command": "docker-compose run web rails new . --force --database=postgresql",
+  "no_of_commands": 2,
+  "run_command": ["docker-compose build", "docker-compose up -d"]
+}

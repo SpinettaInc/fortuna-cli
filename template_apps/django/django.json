@@ -1,0 +1,10 @@
+{
+  "settings": ["Dockerfile", "requirements.txt", "django.yml"],
+  "command": "docker-compose run web django-admin.py startproject <client_name> .",
+  "run_command": "docker-compose up -d",
+  "ENGINE": "django.db.backends.postgresql",
+  "NAME": "postgres",
+  "USER": "postgres",
+  "HOST": "db",
+  "PORT": 5432
+}
